@@ -1223,7 +1223,7 @@ module Net
 
       # FIXME: a ? method should never raise.
       def valid?(name)
-        if name =~ /[^-\w\.]/
+        if name =~ /[^-\w\.*]/
           raise ArgumentError, "Invalid domain name #{name}"
         else
           true
